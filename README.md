@@ -41,5 +41,5 @@ $$  V_{\mu} =Ex_1+\Delta V \mathbf{1}_{(0,+\infty)}x_2 $$
 + We get the functions needed to build the reduced model of the S.E.,  since the entire problem is projected in another space endowed with some special properties, it has been
   possible to achieve a tremendous reduction (x100/x200) in the time needed to perform the same simulation.
 
-## Multiphysics: Stokes + Diffusion/Transport (chemical species)
+## Multiphysics: Parametrised Stokes + Diffusion/Transport (chemical species)
 ...  READ-ME in progress

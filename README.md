@@ -1,14 +1,21 @@
 # Background
 Most of the functions, methods and classes leveraged in this repo rely on the [dl-rom](https://github.com/NicolaRFranco/dlroms) code and on the [PySINDy](https://github.com/dynamicslab/pysindy) library for the model discovery section.
 
-in order to run the ```PySINDy``` library and the relative examples, install its [latest version](https://pypi.org/project/pysindy/):
-
-```
-pip install pysindy==2.0.0rc3
-```
-
-# POD-Galerking RB method
-This method, in a nutshell, consists of the following maps combinations. Where $\Psi(\mu)$ is the parametrised solution map of the considered PDE, $\mu \in \mathcal{P} \subset \mathbb{R}^p$ the parameter vector, $s$ is the output of the associated functional (for instance, the velocity field in 2D has two components, therefore $s=2$), $V$ being an Hilbert-space
++ In order to run the ```PySINDy``` library and the relative examples, install its [latest version](https://pypi.org/project/pysindy/):
+  ```
+  pip install pysindy==2.0.0rc3
+  ```
++ Sampling snapshots employing the [Latin-Hypercube](https://pythonhosted.org/pyDOE/randomized.html) nearly-randomized paradigm:
+  ```
+  !pip install pyDOE
+  ```
++ Parallelise *tasks* by pickling *workers* created in [Ray](https://docs.ray.io/en/latest/index.html):
+  ```
+  !pip install -q ray
+  !pip install -U "ray[default]"
+  ```
+# POD-Galerkin RB method
+This method, in a nutshell, consists of the following map combinations [[1]](https://arxiv.org/abs/1511.02021). Where $\Psi(\mu)$ is the parametrised solution map of the considered PDE, $\mu \in \mathcal{P} \subset \mathbb{R}^p$ the parameter vector, $s$ is the output of the associated functional (for instance, the velocity field in 2D has two components, therefore $s=2$), $V$ being an Hilbert-space
 
 $$
 \begin{align}

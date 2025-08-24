@@ -49,10 +49,42 @@ $$
 The affine decomposition of the problem is
 
 $$  V_{\mu} =Ex_1+\Delta V \mathbf{1}_{(0,+\infty)}x_2 $$
-+ Now the FEM solution of this model, which is a diffusion-reaction equation, is repeated for different (random) parameters to build the $\mathcal{M}_h$ space linked to the
++ Now the FEM solution of this model, which is a diffusion-reaction equation, is repeated for different (random) parameters to build the $\mathcal{M}\subset V_h$ subset linked to the
    so-called snapshot matrix, upon which the POD decomposition is performed.
 + We get the functions needed to build the reduced model of the S.E.,  since the entire problem is projected in another space endowed with some special properties, it has been
   possible to achieve a tremendous reduction (x100/x200) in the time needed to perform the same simulation.
 
 ## Multiphysics: Parametrised Stokes + Diffusion/Transport (chemical species)
-...  READ-ME in progress
+The idea here is to couple the linear problem of the Stokes Equation, and then pass through the affine composition the compiled velocity field to a time-dependent problem of transport-diffusion of a scalar quantity like the concentration of species or temperature for instance.
+
+$$
+\begin{equation}
+    \begin{cases}
+        -\Delta \mathbf{b} +\nabla p=0 &\quad in \thinspace \Omega \\
+        \text{div} \mathbf{b}=0  &\quad in \thinspace \Omega \\
+        \mathbf{b}=[c_1,0]^T  &\quad on \thinspace\partial \Gamma_1^{in}\\
+        \mathbf{b}=[c_2,c_3]^T &\quad on \thinspace\partial \Gamma_2^{in}\\
+        \mathbf{b}=0 &\quad on \thinspace\partial \Omega /\Gamma_1^{in}\cup\Gamma_2^{in}\\
+    \end{cases} 
+\end{equation}
+$$
+
+and
+
+```
+\begin{equation}
+\begin{cases}
+    \frac{\partial u}{\partial t} -\frac{1}{2}\Delta u + \mathbf{b}_{\boldsymbol{\mu}}\cdot \nabla u=0 &\qquad in \thinspace \Omega\times(0,T)\\
+    \nabla u \cdot \hat{n}=0 &\qquad on \thinspace \Gamma_{1}^{\text{out}}\cup\Gamma_{2}^{\text{out}}\\
+    u=0 &\qquad on \thinspace \Gamma^{\text{walls}}\\
+    u(\cdot,0)=\mathbf{1}_{\Gamma_{in}} &\qquad on \thinspace \Gamma^{\text{in}}
+    \label{eq: Transport-diffusion_assign1}
+\end{cases}
+\end{equation}
+```
+
+Since the problem is affine, the affine-decomposition can be introduced on the parametrized term
+```
+A_{\boldsymbol{\mu}}=c_1\underbrace{\mathbf{b}_1\nabla u}_{A_1^1} + c_2\underbrace{\mathbf{b}_2\nabla u}_{A_2^2} +
+                     c_3\underbrace{\mathbf{b}_3\nabla u}_{A_3^3}
+```

@@ -33,15 +33,15 @@ But, the idea is to employ a different space $V$ that will be the reduced one, i
 $$s \circ \Psi(\mu)_N : \mathcal{P} \rightarrow V_N \rightarrow \mathbb{R}^s $$
 
 where $\Psi(\mu)_N \in V_N$.
-## Parametrized Shcrodinger's Equation
+## Parametrized Shcrodinger's Equation 2D
 $$
 \begin{equation}
     \begin{cases}
     ih\frac{\partial \psi}{\partial t}=-\frac{\hbar}{2m}\nabla \psi + V_{\mu}\psi &\quad on \thinspace\Omega\times (0,T]\\
-    \psi_{\mathbb{R}}(t,x)=0 &\quad in \thinspace \partial \Omega\\
-    \psi_{\mathbb{C}}(t,x)=0 &\quad in \thinspace \partial \Omega\\
-    \psi_{\mathbb{R}}(0,x)=e^{-100||x||^2} &\quad in \thinspace \Omega, t=0 \\
-    \psi_{\mathbb{C}}(0,x)=0 &\quad in \thinspace \Omega, t=0\\
+    \psi_{\mathbb{R}}(t,\cdot)=0 &\quad in \thinspace \partial \Omega\\
+    \psi_{\mathbb{C}}(t,\cdot)=0 &\quad in \thinspace \partial \Omega\\
+    \psi_{\mathbb{R}}(0,\cdot)=e^{-100||\cdot||^2} &\quad in \thinspace \Omega, t=0 \\
+    \psi_{\mathbb{C}}(0,\cdot)=0 &\quad in \thinspace \Omega, t=0\\
 \end{cases}
 \end{equation}
 $$
@@ -54,14 +54,14 @@ $$  V_{\mu} =Ex_1+\Delta V \mathbf{1}_{(0,+\infty)}x_2 $$
 + We get the functions needed to build the reduced model of the S.E.,  since the entire problem is projected in another space endowed with some special properties, it has been
   possible to achieve a tremendous reduction (x100/x200) in the time needed to perform the same simulation.
 
-## Multiphysics: Parametrised Stokes + Diffusion/Transport (chemical species)
+## Multiphysics: Parametrised Stokes + Diffusion/Transport (chemical species) 2D
 The idea here is to couple the linear problem of the Stokes Equation, and then pass through the affine composition the compiled velocity field to a time-dependent problem of transport-diffusion of a scalar quantity like the concentration of species or temperature for instance.
 
 $$
 \begin{equation}
     \begin{cases}
-        -\Delta \mathbf{b} +\nabla p=0 &\quad in \thinspace \Omega \\
-        \text{div} \mathbf{b}=0  &\quad in \thinspace \Omega \\
+        -\Delta \overrightarrow{b} +\nabla p=0 &\quad in \thinspace \Omega \\
+        \text{div} \overrightarrow{b}=0  &\quad in \thinspace \Omega \\
         \mathbf{b}=[c_1,0]^T  &\quad on \thinspace\partial \Gamma_1^{in}\\
         \mathbf{b}=[c_2,c_3]^T &\quad on \thinspace\partial \Gamma_2^{in}\\
         \mathbf{b}=0 &\quad on \thinspace\partial \Omega /\Gamma_1^{in}\cup\Gamma_2^{in}\\

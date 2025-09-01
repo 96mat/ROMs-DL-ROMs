@@ -37,7 +37,7 @@ where $\Psi(\mu)_N \in V_N$.
 $$
 \begin{equation}
     \begin{cases}
-    ih\frac{\partial \psi}{\partial t}=-\frac{\hbar}{2m}\nabla \psi + V_{\mu}\psi &\quad on \thinspace\Omega\times (0,T]\\
+    i\hbar\frac{\partial \psi}{\partial t}=-\frac{\hbar}{2m}\nabla \psi + V_{\mu}\psi &\quad on \thinspace\Omega\times (0,T]\\
     \psi_{\mathbb{R}}(t,\cdot)=0 &\quad in \thinspace \partial \Omega\\
     \psi_{\mathbb{C}}(t,\cdot)=0 &\quad in \thinspace \partial \Omega\\
     \psi_{\mathbb{R}}(0,\cdot)=e^{-100||\cdot||^2} &\quad in \thinspace \Omega, t=0 \\
@@ -65,6 +65,7 @@ $$
         \mathbf{b}=[c_1,0]^T  &\quad on \thinspace\partial \Gamma_1^{in}\\
         \mathbf{b}=[c_2,c_3]^T &\quad on \thinspace\partial \Gamma_2^{in}\\
         \mathbf{b}=0 &\quad on \thinspace\partial \Omega /\Gamma_1^{in}\cup\Gamma_2^{in}\\
+        \nabla b \cdot \hat{n}= 0 &\quad on \thinspace\partial \Omega_{N}
     \end{cases} 
 \end{equation}
 $$

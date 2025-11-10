@@ -89,5 +89,11 @@ Since the problem is affine, the affine-decomposition can be introduced on the p
 A_{\boldsymbol{\mu}}=c_1\underbrace{\mathbf{b}_1\nabla u}_{A_1^1} + c_2\underbrace{\mathbf{b}_2\nabla u}_{A_2^2} +
                      c_3\underbrace{\mathbf{b}_3\nabla u}_{A_3^3}
 ```
+The reconstructed velocity and concentration fields (reduced) employing an internal LU-factorization is x600 times faster than the original FOM with an error $\le 0.5$%
+
+
+https://github.com/user-attachments/assets/6bf0d9e1-7fc2-41e2-b8bb-636d7704b85c
+
+
 # Fisher-KPP Equation
 ... to do...

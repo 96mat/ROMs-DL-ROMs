@@ -74,7 +74,10 @@ where the parametrisation enters through
 <img width="481" height="147" alt="image" src="https://github.com/user-attachments/assets/28f4ca39-1fb5-4bbb-9fa8-e1562eb11b87" />
 
 here the surrogate model (approximately 10,000 times faster than the FOM), varying the parameters outside the training set
+
 ![output1](https://github.com/user-attachments/assets/ff80472c-da72-48a9-bff8-c0179237c547)
+
+and
 
 ![output3](https://github.com/user-attachments/assets/27baeed7-fc27-47ea-aca1-5758cb1a1643)
 

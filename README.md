@@ -57,10 +57,8 @@ and
 
 
 Since the problem is affine, the affine-decomposition can be introduced on the parametrized term
-```
-A_{\boldsymbol{\mu}}=c_1\underbrace{\mathbf{b}_1\nabla u}_{A_1^1} + c_2\underbrace{\mathbf{b}_2\nabla u}_{A_2^2} +
-                     c_3\underbrace{\mathbf{b}_3\nabla u}_{A_3^3}
-```
+<img width="671" height="272" alt="image" src="https://github.com/user-attachments/assets/4915e8a8-404c-41ce-b8cf-3e04a0d889ad" />
+
 The reconstructed velocity and concentration fields (reduced) employing an internal LU-factorization is x600 times faster than the original FOM with an error $\le 0.5$%
 
 

@@ -34,7 +34,8 @@ $$s \circ \Psi(\mu)_N : \mathcal{P} \rightarrow V_N \rightarrow \mathbb{R}^s $$
 
 where $\Psi(\mu)_N \in V_N$.
 ## Parametrized Shcrodinger's Equation 2D
-<img width="769" height="334" alt="image" src="https://github.com/user-attachments/assets/9eac8278-4269-4b23-a8ea-de7806f604e0" />
+<img width="697" height="277" alt="image" src="https://github.com/user-attachments/assets/d9ed2a52-2387-4a5d-b869-ac55f64f3c48" />
+
 
 
 The affine decomposition of the problem is

@@ -34,17 +34,8 @@ $$s \circ \Psi(\mu)_N : \mathcal{P} \rightarrow V_N \rightarrow \mathbb{R}^s $$
 
 where $\Psi(\mu)_N \in V_N$.
 ## Parametrized Shcrodinger's Equation 2D
-$$
-\begin{equation}
-    \begin{cases}
-    i\hbar\frac{\partial \psi}{\partial t}=-\frac{\hbar}{2m}\nabla \psi + V_{\mu}\psi &\quad on \thinspace\Omega\times (0,T]\\
-    \psi_{\mathbb{R}}(t,\cdot)=0 &\quad in \thinspace \partial \Omega\\
-    \psi_{\mathbb{C}}(t,\cdot)=0 &\quad in \thinspace \partial \Omega\\
-    \psi_{\mathbb{R}}(0,\cdot)=e^{-100||\cdot||^2} &\quad in \thinspace \Omega, t=0 \\
-    \psi_{\mathbb{C}}(0,\cdot)=0 &\quad in \thinspace \Omega, t=0\\
-\end{cases}
-\end{equation}
-$$
+<img width="769" height="334" alt="image" src="https://github.com/user-attachments/assets/9eac8278-4269-4b23-a8ea-de7806f604e0" />
+
 
 The affine decomposition of the problem is
 
@@ -57,32 +48,13 @@ $$  V_{\mu} =Ex_1+\Delta V \mathbf{1}_{(0,+\infty)}x_2 $$
 ## Multiphysics: Parametrised Stokes + Diffusion/Transport (chemical species) 2D
 The idea here is to couple the linear problem of the Stokes Equation, and then pass through the affine composition the compiled velocity field to a time-dependent problem of transport-diffusion of a scalar quantity like the concentration of species or temperature for instance.
 
-$$
-\begin{equation}
-    \begin{cases}
-        -\Delta \overrightarrow{b} +\nabla p=0 &\quad in \thinspace \Omega \\
-        \text{div} \overrightarrow{b}=0  &\quad in \thinspace \Omega \\
-        \mathbf{b}=[c_1,0]^T  &\quad on \thinspace\partial \Gamma_1^{in}\\
-        \mathbf{b}=[c_2,c_3]^T &\quad on \thinspace\partial \Gamma_2^{in}\\
-        \mathbf{b}=0 &\quad on \thinspace\partial \Omega /\Gamma_1^{in}\cup\Gamma_2^{in}\\
-        \nabla b \cdot \hat{n}= 0 &\quad on \thinspace\partial \Omega_{N}
-    \end{cases} 
-\end{equation}
-$$
+<img width="689" height="342" alt="image" src="https://github.com/user-attachments/assets/41d48553-9d8d-44b7-8ada-0323b98c8f4b" />
+
 
 and
 
-```
-\begin{equation}
-\begin{cases}
-    \frac{\partial u}{\partial t} -\frac{1}{2}\Delta u + \mathbf{b}_{\boldsymbol{\mu}}\cdot \nabla u=0 &\qquad in \thinspace \Omega\times(0,T)\\
-    \nabla u \cdot \hat{n}=0 &\qquad on \thinspace \Gamma_{1}^{\text{out}}\cup\Gamma_{2}^{\text{out}}\\
-    u=0 &\qquad on \thinspace \Gamma^{\text{walls}}\\
-    u(\cdot,0)=\mathbf{1}_{\Gamma_{in}} &\qquad on \thinspace \Gamma^{\text{in}}
-    \label{eq: Transport-diffusion_assign1}
-\end{cases}
-\end{equation}
-```
+<img width="834" height="210" alt="image" src="https://github.com/user-attachments/assets/e8f3ca40-0dd0-4fc3-bf1c-1208a119e14c" />
+
 
 Since the problem is affine, the affine-decomposition can be introduced on the parametrized term
 ```

@@ -67,4 +67,10 @@ https://github.com/user-attachments/assets/6bf0d9e1-7fc2-41e2-b8bb-636d7704b85c
 
 
 # Fisher-KPP Equation
-... to do...
+<img width="634" height="163" alt="image" src="https://github.com/user-attachments/assets/cca0eba4-3c31-46a0-abc0-5e5b4a9ae0ee" />
+
+where the parametrisation enters through
+
+<img width="481" height="147" alt="image" src="https://github.com/user-attachments/assets/28f4ca39-1fb5-4bbb-9fa8-e1562eb11b87" />
+
+

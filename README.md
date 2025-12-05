@@ -44,7 +44,7 @@ $$  V_{\mu} =Ex_1+\Delta V \mathbf{1}_{(0,+\infty)}x_2 $$
 + Now the FEM solution of this model, which is a diffusion-reaction equation, is repeated for different (random) parameters to build the $\mathcal{M}\subset V_h$ subset linked to the
    so-called snapshot matrix, upon which the POD decomposition is performed.
 + We get the functions needed to build the reduced model of the S.E.,  since the entire problem is projected in another space endowed with some special properties, it has been
-  possible to achieve a tremendous reduction (x100/x200) in the time needed to perform the same simulation.
+  possible to achieve a tremendous reduction **(x100/x200)** in the time needed to perform the same simulation.
 
 https://github.com/user-attachments/assets/b75bf9f7-64e6-4f8b-a495-00f408ebc3c1
 
@@ -77,7 +77,7 @@ where the parametrisation enters through
 
 <img width="481" height="147" alt="image" src="https://github.com/user-attachments/assets/28f4ca39-1fb5-4bbb-9fa8-e1562eb11b87" />
 
-here the surrogate model (approximately 10,000 times faster than the FOM), varying the parameters outside the training set
+here the surrogate model (approximately **10,000 times** faster than the FOM), varying the parameters outside the training set
 
 ![output1](https://github.com/user-attachments/assets/ff80472c-da72-48a9-bff8-c0179237c547)
 

@@ -44,7 +44,7 @@ $$  V_{\mu} =Ex_1+\Delta V \mathbf{1}_{(0,+\infty)}x_2 $$
 + Now the FEM solution of this model, which is a diffusion-reaction equation, is repeated for different (random) parameters to build the $\mathcal{M}\subset V_h$ subset linked to the
    so-called snapshot matrix, upon which the POD decomposition is performed.
 + We get the functions needed to build the reduced model of the S.E.,  since the entire problem is projected in another space endowed with some special properties, it has been
-  possible to achieve a tremendous reduction **(x100/x200)** in the time needed to perform the same simulation.
+  possible to achieve a tremendous reduction **(x100/x200)** in the **time** needed to perform the same simulation.
 
 https://github.com/user-attachments/assets/b75bf9f7-64e6-4f8b-a495-00f408ebc3c1
 
@@ -64,7 +64,7 @@ and
 Since the problem is affine, the affine-decomposition can be introduced on the parametrized term
 <img width="671" height="272" alt="image" src="https://github.com/user-attachments/assets/4915e8a8-404c-41ce-b8cf-3e04a0d889ad" />
 
-The reconstructed velocity and concentration fields (reduced) employing an internal LU-factorization is x600 times faster than the original FOM with an error $\le 0.5$%
+The reconstructed velocity and concentration fields (reduced) employing an internal LU-factorization is **x600 times** faster than the original FOM with an error $\le 0.5$%
 
 
 https://github.com/user-attachments/assets/6bf0d9e1-7fc2-41e2-b8bb-636d7704b85c
